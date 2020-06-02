@@ -1,0 +1,415 @@
+<html>
+	<head>
+		<title>Mayank Parmar</title>
+		<meta charset="utf-8">
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+      .navbar
+         {
+          margin-bottom: 0;
+          background-color: #1C2331;
+          z-index: 9999;
+          border: 0;
+          font-size: 12px !important;
+          line-height: 1.42857143 !important;
+          letter-spacing: 4px;
+          border-radius: 0;
+          padding: 1px 2px;
+        }
+
+        .navbar li a, .navbar .navbar-brand 
+        {
+          color: #fff !important;
+        }
+
+        .navbar-nav li a:hover
+        {
+          color: #08EACA !important;
+          
+
+        }
+
+        .navbar-default .navbar-toggle 
+        {
+          border-color: transparent;
+          color: #fff !important;
+        }
+
+        #panel, #flip
+        {
+          padding: 4px;
+          text-align: center;
+          background-color: #979A9A;
+          border: solid 1px white;
+          font-size: 15px;
+          font-color: white;
+          letter-spacing: 2px
+
+        }
+
+        #panel
+        {
+          padding: 40px 20px;
+          display: none;
+          font-size: 15px;
+        letter-spacing: 2px;
+
+        }
+
+
+        #panel1, #flip1
+        {
+          padding: 4px;
+          text-align: center;
+          background-color: #979A9A;
+          border: solid 1px white;
+          font-size: 15px;
+          font-color: white;
+          letter-spacing: 2px
+
+        }
+
+        #panel1 
+        {
+          padding: 40px 20px;
+          display: none;
+          font-size: 15px;
+        letter-spacing: 2px;
+
+        }
+
+        #panel2, #flip2
+        {
+          padding: 4px;
+          text-align: center;
+          background-color: #979A9A;
+          border: solid 1px white;
+          font-size: 15px;
+          font-color: white;
+          letter-spacing: 2px
+
+        }
+
+        #panel2 
+        {
+          padding: 40px 20px;
+          display: none;
+          font-size: 15px;
+        letter-spacing: 2px;
+
+        }
+
+        .slideanim {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+    </style>
+
+    <script>
+      
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#flip1").click(function(){
+            $("#panel1").slideToggle("slow");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#flip2").click(function(){
+            $("#panel2").slideToggle("slow");
+          });
+        });
+
+        $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage'], a[href='#about']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})  
+
+        $(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+    </script>
+
+	</head>
+
+	<body>
+
+    
+		<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MAYANK</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about active" class="about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="Resume.pdf">RESUME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+    
+
+    <div class="banner">
+      <video autoplay muted loop style="width: 100%">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+
+        <div class="content"><br><br><br><br><br>
+          <p> Hello I'm </p>
+          <h1> <b>Mayank Parmar</b> </h1><br>
+          <p> I'm Mayank and I'm Undergraduate at CHARUSAT University Studying in Computer Engineering. I am a Front-End Website Developer</p><br><br>
+
+          <a class="button stroke smoothscroll slideanim" href="#about">
+            <p>More About Me</p>
+          </a><br><br><br><br><br>
+
+          <div class="footer-social-icons slideanim">
+                  <ul>
+                    <li><a href="https://www.linkedin.com/in/mayank-parmar-7b1474191/" target="_self"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://myaccount.google.com/profile" target="_self"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://www.facebook.com/mayank.parmar.3760" target="_self"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/" target="_self"><i class="fa fa-github"></i></a></li>
+                    
+                  </ul>
+                </div>
+      </div>
+</div>
+    
+       
+            <div class="container-fluid bg-1 text-center"><br>
+            <center><div id="about"><b>ABOUT</b></div></center><br>
+            <center><p id="para1"><b> Let Me Introduce My Self</b></p><br></center>
+            <center><img src="img1.jpg" class="img-rounded slideanim" height="200px" width="200px"><br><br></center>
+
+            <center><p id="para2" style="letter-spacing: 3px;"> Hii! I'm Mayank and I am Undergraduate from CHARUSAT university in the Branch of Computer Engineering. I make this Website to See my Projects.</p></center><br><br>
+
+            <center>
+            <div class="col-sm-6">
+            <center> <p id="profile" class="slideanim"><b>PROFILE</b></p></center><hr>
+             <center> <p id="para2" style="letter-spacing: 3px;"> Hello I'm Mayank Parmar and Currently I Worked on a Front-end Wesbite Developer</p></center><br>
+            <center><p id="para4" class="slideanim"><b>FULL NAME:</b></p>
+                    <p style="font-size: 20px; letter-spacing: 1px;" class="slideanim"><small> Mayank Parmar</small></p><br>
+
+                    <p id="para4" class="slideanim"><b>COLLEGE:</b></p>
+                    <p style="font-size: 20px; letter-spacing: 1px;" class="slideanim"><small>Charusat University</small></p><br>
+
+
+                    <p id="para4" class="slideanim"><b>INTERNSHIP:</b></p>
+                    <p style="font-size: 20px; letter-spacing: 1px;" class="slideanim"><small>MSquare Technologies</small></p><br>
+
+                    <p id="para4" class="slideanim"><b>EMAIL:</b></p>
+                    <p style="font-size: 20px; letter-spacing: 1px;" class="slideanim"><small>parmarmayank348@gmail.com</small></p>
+
+             </div></center>
+</center
+           </div>
+
+           <div class="col-sm-6" >
+            <center><p id="profile" class="slideanim"><b> SKILLS</b> </p></center><hr>
+              <strong style="letter-spacing: 2px;">HTML:</strong><br><br>
+                <div class="progress">
+
+                  
+                  <div class="progress-bar progress-bar-striped bg-dark active slideanim" role="progressbar"
+                   aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%"> 80% </div>
+              
+          </div>
+
+                <strong style="letter-spacing: 2px;" class="slideanim">CSS:</strong><br><br>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active slideanim" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%"> 80% </div>
+              </div>
+
+              <strong style="letter-spacing: 2px;" class="slideanim">JAVASCRIPT:</strong><br><br>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active slideanim" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:65%"> 65% </div>
+              </div>
+
+              <strong style="letter-spacing: 2px;" class="slideanim">jQuery:</strong><br><br>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active slideanim" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%"> 60% </div>
+              </div>
+
+              <strong style="letter-spacing: 2px;" class="slideanim">BOOTSTRAP:</strong><br><br>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%"> 80% </div>
+              </div>
+
+              <strong style="letter-spacing: 2px;" class="slideanim">PHP:</strong><br><br>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active slideanim" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"> 40% </div>
+              </div>
+
+              
+        
+          </div><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <center> <a href="Resume.pdf" title="Download Resume" class="button button-primary slideanim">Download Resume</a></center>
+        </div>
+
+      
+              <div class="container-fluid bg-2 text-center"><br>
+                <center><div id="projects"><b>MY PROJECTS</b></div><br>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="head1 text-center"><b>PROJECT 1</b></div><br>
+                      <img src="image1.jpg" width="80%" height="200px" class="image slideanim"><br><br>
+                      <div class="subject"><b>E-Commerce Website</b></div><br>
+                      <div id="flip" style="cursor: pointer; color: black"><b>Description of Project</b></div>
+                      <div id="panel">It is a Shopping Website And this Website is made with the use of HTML, CSS, BOOTSTRAP, JAVASCRIPT. These is only a Front-end Website.</div><br>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="head1 text-center"><b>PROJECT 2</b></div><br>
+                      <img src="image2.png" width="80%" height="200px" class="image slideanim"><br><br>
+                      <div class="subject"><b>Fake News Detection</b></div><br>
+                      <div id="flip1" style="cursor: pointer; color: black"><b>Description of Project</b></div>
+                      <div id="panel1">In these project we predict the fake news using the naïve bayes algorithm amd one desktop application is made which predict the output.</div><br>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="head1 text-center"><b>PROJECT 3</b></div><br>
+                      <img src="project3.jpg" width="80%" height="200px" class="image slideanim"><br><br>
+                      <div class="subject"><b>Company Profile Theme</b></div><br>
+                      <div id="flip2" style="cursor: pointer; color: black"><b>Description of Project</b></div>
+                      <div id="panel2">A Simple Company Profile is made With the help of HTML, CSS, BOOTSTRAP. It is Basically a Company Profile Of a Software Base Company.</div><br><br>
+                    </div><br><br>
+                  </div>
+                </center>
+              </div>
+            </center>
+          </div>
+
+            <div class="container-fluid bg-3 text-center"><br>
+              <div id="contact"><b>CONTACT</b></div><br>
+
+              <div class="row">
+    <div class="col-sm-5">
+     <center> <p class="subject">You Can Asked me Doubt Anytime my mail Box is always open.</p></center><br>
+     <center> <a href="https://mail.google.com/mail/u/1/?tab=wm&ogbl#inbox?compose=CllgCKHQdLXQzddJWWHMQFpDbPJQnXSxnrPqdJtHxFWjkFlxJQfwXwmWjlzRcnrHMqJFJcbsbSq" title="SAY HELLO" class="button button-primary slideanim">SAY HELLO</a></center><br>
+      <center><p><span class="glyphicon glyphicon-map-marker" id="subject1"></span><b> Surat,Gujarat</b></p></center><br>
+      <center><p><span class="glyphicon glyphicon-phone"></span><b> +91 6355123964 </b></p></center><br>
+      <center><p><span class="glyphicon glyphicon-envelope"></span><b> parmarmayank348@gmail.com</b></p></center>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Please Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <center><button class="btn btn-success btn-sm" style="padding: 2px 30px" type="submit">Send</button></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <div class="container-fluid bg-4">
+              <div class="footer-main-div">
+               <center> <p style="color: white"> Copyright &copy; 2020 MayankParmar.com</p>
+                
+              </div>
+            </div>
+
+
+
+
+
+
+
+	</body>
+
+</html>
